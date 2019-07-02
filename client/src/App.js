@@ -3,6 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 
+// call REST API
+// GET a list of courses
+// Render the list of course titles / results in an unordered list
+// open a terminal and start your rest api  npm start
+// open another terminal and start your React app / browse to client folder, then, npm start
+
+class App extends Component {
+
+    constructor(props) {
+
+    }
+}
+
 function App() {
   return (
     <div className="App">
