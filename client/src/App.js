@@ -16,7 +16,7 @@ export default class CoursesList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
+    axios.get(`http://localhost:5000/api/users`)
       .then(res => {
         const courses = res.data;
         this.setState({ courses });
