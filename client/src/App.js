@@ -12,11 +12,12 @@ import axios from 'axios';
 // below code adapted from https://alligator.io/react/axios-react/
 export default class CoursesList extends React.Component {
   state = {
+    isLoading: true,
     courses: []
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:5000/api/users`)
+    axios.get(`http://localhost:5000/api/courses`)
       .then(res => {
         const courses = res.data;
         this.setState({ courses });
@@ -84,7 +85,7 @@ class MyComponent extends React.Component {
 */
 
 
-
+/*
 function App() {
   return (
     <div className="App">
@@ -105,5 +106,5 @@ function App() {
     </div>
   );
 }
-
+*/
 export default App;
