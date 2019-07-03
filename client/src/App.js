@@ -9,7 +9,7 @@ import CourseDetail from './components/CourseDetail';
 import Courses from './components/Courses';
 import CreateCourse from './components/CreateCourse';
 import Header from './components/Header';
-import PrivateRoute from "./components/layout/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 import UpdateCourse from './components/UpdateCourse';
 import UserSignIn from './components/UserSignIn';
 import UserSignOut from './components/UserSignOut';

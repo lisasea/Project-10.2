@@ -20,5 +20,4 @@ function PrivateRoute({ component: Component, ...rest }) { // from https: /react
   );
 }
 
-
 export default PrivateRoute;
