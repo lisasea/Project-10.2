@@ -98,9 +98,11 @@ class UpdateCourse extends Component {
               </form>
             </div>
           </div>
-        );
-      }
-    };
+          );
+    }
+}
+
+export default UpdateCourse;
 
 
 // This component provides the "Update Course" screen
