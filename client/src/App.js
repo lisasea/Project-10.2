@@ -57,11 +57,11 @@ class App extends Component { //set global state
         </Switch>
       </div>
     </BrowserRouter>
-  );
-}
+    );
+  }
 }
 
-  export default App;
+export default App;
 
 /*/ below code adapted from https://alligator.io/react/axios-react/
 export default class CoursesList extends React.Component {
