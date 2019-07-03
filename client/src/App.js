@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import axios from "axios";
-//import logo from "./logo.svg"; ?
-//import "./App.css"; ?
 
 // import components
 import CourseDetail from './components/CourseDetail';
@@ -50,10 +48,10 @@ class App extends Component { //set global state
         <Header  />
         <Switch>
           <Route exact path="/" component={Courses} />
-          <PrivateRoute path="/courses/create"  component={CreateCourse} /> 
-          <PrivateRoute path="/courses/:id/update" component={UpdateCourse} /> 
+          <PrivateRoute exact path="/courses/create"  component={CreateCourse} /> 
+          <PrivateRoute exact path="/courses/:id/update" component={UpdateCourse} /> 
           <Route exact path="/courses/:id" component={CourseDetail} />
-          <Route exact path="/UsersignIn" component={() => <UserSignIn  signIn={this.signIn}/>} /> 
+          <Route exact path="/UserSignIn" component={() => <UserSignIn  signIn={this.signIn}/>} /> 
           <Route exact path="/UserSignUp" component={UserSignUp} />
           <Route exact path="/UserSignOut" component={UserSignOut} />
         </Switch>
