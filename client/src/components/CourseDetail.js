@@ -112,9 +112,7 @@ class CourseDetail extends Component { // setup empty courses array and empty us
                         </div>
                       </div>
                     </div>
-          )}</User>
-        );
+          )}
     }
-}
 
 export default CourseDetail;
