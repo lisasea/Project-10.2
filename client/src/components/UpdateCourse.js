@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
 import axios from 'axios'; 
 
 class UpdateCourse extends Component {
@@ -25,7 +24,7 @@ class UpdateCourse extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        // const { id, title, description, estimatedTime, materialsNeeded, userId } = this.state;
+        const {match: {params}} = this.props;
         axios.put(`http://localhost:5000/api/courses/${params.id}`, { // `http://localhost:5000/api/courses/${params.id}` ??
           auth: {
               username: window.localStorage.getItem("emailAddress"), //"Email"? "username"?
@@ -54,7 +53,7 @@ class UpdateCourse extends Component {
       };
 
       render() {
-          const { user, id, title, description, estimatedTime, materialsNeeded, validationErrors } = this.state;
+          const { course, user, validationErrors } = this.state;
           return(
             <div className="bounds course--detail">
                 <h1>Update Course</h1>
