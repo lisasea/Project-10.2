@@ -53,7 +53,7 @@ class UpdateCourse extends Component {
       };
 
       render() {
-          const { course, user, validationErrors } = this.state;
+          const { course, user, validationErrors } = this.state; //isn't "course" used in lines 75, 79, 87, 91??
           return(
             <div className="bounds course--detail">
                 <h1>Update Course</h1>
@@ -72,11 +72,11 @@ class UpdateCourse extends Component {
                 <div className="grid-66">
                   <div className="course--header">
                     <h4 className="course--label">Course</h4>
-                    <div><input id="title" name="title" type="text" className="input-title course--title--input" placeholder="Course title..." defaultValue={course.title} onChange={e => this.handleInputChange(e)}/></div>
+                    <div><input id="title" name="title" type="text" className="input-title course--title--input" placeholder="Course Title" onChange={e => this.handleInputChange(e)} defaultValue={this.state.course.title} /></div>
                     <p>By {user.firstName} {user.lastName}</p>
                   </div>
                   <div className="course--description">
-                    <div><textarea id="description" name="description" className placeholder={this.state.course.description} onChange={e => this.handleInputChange(e)}/></div>
+                    <div><textarea id="description" name="description" className="" placeholder="Course Description" onChange={e => this.handleInputChange(e)} value={this.state.course.description}/></div>
                   </div>
                 </div>
                 <div className="grid-25 grid-right">
@@ -84,16 +84,19 @@ class UpdateCourse extends Component {
                     <ul className="course--stats--list">
                       <li className="course--stats--list--item">
                         <h4>Estimated Time</h4>
-                        <div><input id="estimatedTime" name="estimatedTime" type="text" className="course--time--input" placeholder="Hours" defaultValue={this.state.course.estimatedTime} onChange={e =>this.handleInputChange(e)}/></div>
+                        <div><input id="estimatedTime" name="estimatedTime" type="text" className="course--time--input" placeholder="Hours" onChange={e =>this.handleInputChange(e)} value={this.state.course.estimatedTime}/></div>
                       </li>
                       <li className="course--stats--list--item">
                         <h4>Materials Needed</h4>
-                        <div><textarea id="materialsNeeded" name="materialsNeeded" className placeholder="Materials Needed" defaultValue={this.state.course.materialsNeeded} onChange={e => this.handleInputChange(e)}/></div>
+                        <div><textarea id="materialsNeeded" name="materialsNeeded" className="" placeholder="Materials Needed" onChange={e => this.handleInputChange(e)} value={this.state.course.materialsNeeded}/></div>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div className="grid-100 pad-bottom"><button className="button" type="submit">Update Course</button><button className="button button-secondary" onclick={this.handleCancel}>Cancel</button></div>
+                <div className="grid-100 pad-bottom">
+                    <button className="button" type="submit">Update Course</button>
+                    <button className="button button-secondary" onclick={this.handleCancel}>Cancel</button>
+                </div>
               </form>
             </div>
           </div>
