@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'; 
-import axios from "axios";
 
-class UserSignIn extends Component {
+class UserSignUp extends Component {
     state = { 
       emailAddress: "", 
       password: "" 
@@ -26,25 +25,25 @@ class UserSignIn extends Component {
               <div className="grid-33 centered signin">
                 <h1>Sign Up</h1>
                 <div>
-                  <form>
-                    <div><input id="firstName" name="firstName" type="text" className placeholder="First Name" defaultValue /></div>
-                    <div><input id="lastName" name="lastName" type="text" className placeholder="Last Name" defaultValue /></div>
-                    <div><input id="emailAddress" name="emailAddress" type="text" className placeholder="Email Address" defaultValue /></div>
-                    <div><input id="password" name="password" type="password" className placeholder="Password" defaultValue /></div>
-                    <div><input id="confirmPassword" name="confirmPassword" type="password" className placeholder="Confirm Password" defaultValue /></div>
-                    <div className="grid-100 pad-bottom"><button className="button" type="submit">Sign Up</button><button className="button button-secondary" onclick="event.preventDefault(); location.href='index.html';">Cancel</button></div>
+                  <form onSubmit={this.handleSubmit}>
+                    <div><input id="firstName" name="firstName" type="text" className="" placeholder="First Name" value={this.state.firstName} onChange={e => this.handleInputChange(e)}/></div>
+                    <div><input id="lastName" name="lastName" type="text" className="" placeholder="Last Name" value={this.state.lastName} onChange={e => this.handleInputChange(e)}/></div>
+                    <div><input id="emailAddress" name="emailAddress" type="text" className="" placeholder="Email Address" value={this.state.emailAddress} onChange={e => this.handleInputChange(e)}/></div>
+                    <div><input id="password" name="password" type="password" className="" placeholder="Password" value={this.state.password} onChange={e => this.handleInputChange(e)}/></div>
+                    <div><input id="confirmPassword" name="confirmPassword" type="password" className="" placeholder="Confirm Password" value={this.state.confirmPassword} onChange={e => this.handleInputChange(e)}/></div>
+                    <div className="grid-100 pad-bottom"><button className="button" type="submit">Sign Up</button><Link to="/" className="button button-secondary">Cancel</Link></div>
                   </form>
                 </div>
                 <p>&nbsp;</p>
-                <p>Already have a user account? <a href="sign-in.html">Click here</a> to sign in!</p>
+                <p>Already have a user account? <Link to="sign-in.html">Click here</Link> to sign in!</p>
               </div>
             </div>
           </div>
         );
-      }
-    });
-        )
-    } 
+    }
+} 
+
+export default UserSignUp
 // This component provides the "Sign Up" screen 
 // rendering a form that allows a user to sign up by creating a new account
 //  also renders a "Sign Up" button
