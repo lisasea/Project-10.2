@@ -2,15 +2,23 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom'; 
 
 class UserSignUp extends Component {
-    state = { 
-      emailAddress: "", 
-      password: "" 
+    constructor(props) {
+      super(props);
+      this.state = {
+        firstName: "",
+        lastName: "",
+        emailAddress: "",
+        password: "",
+        confirmPassword: "",
+        validationErrors: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
   
     handleInputChange = e => {
         e.preventDefault();
       this.setState({ [e.target.name]: e.target.value });
-    };
+    }
   
     handleSubmit = e => {
       e.preventDefault();
