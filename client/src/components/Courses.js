@@ -6,13 +6,13 @@ class Courses extends Component { // setup empty courses array
   constructor(props){
     super(props)
     this.state = {
-    courses: []
+      courses: []
     };
   }
 
 componentDidMount() { // get list of courses from REST API 
   axios.get("http://localhost:5000/api/courses")
-  .then (response => {
+  .then (res => {
     this.setState({
       courses: res.data
     })

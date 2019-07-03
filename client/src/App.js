@@ -4,7 +4,7 @@ import React from "react";
 import axios from "axios";
 
 // import components
-import Courses from "./components/Courses";
+//import Courses from "./components/Courses";
 
 // below code adapted from https://alligator.io/react/axios-react/
 export default class CoursesList extends React.Component {
