@@ -51,9 +51,9 @@ class App extends Component { //set global state
           <PrivateRoute exact path="/courses/create"  component={CreateCourse} /> 
           <PrivateRoute exact path="/courses/:id/update" component={UpdateCourse} /> 
           <Route exact path="/courses/:id" component={CourseDetail} />
-          <Route exact path="/UserSignIn" component={() => <UserSignIn  signIn={this.signIn}/>} /> 
-          <Route exact path="/UserSignUp" component={UserSignUp} />
-          <Route exact path="/UserSignOut" component={UserSignOut} />
+          <Route exact path="/signin" component={() => <UserSignIn  signIn={this.signIn}/>} /> 
+          <Route exact path="/signup" component={UserSignUp} />
+          <Route exact path="/signout" component={UserSignOut} />
         </Switch>
       </div>
     </BrowserRouter>
