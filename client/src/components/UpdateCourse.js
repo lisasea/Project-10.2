@@ -53,7 +53,7 @@ class UpdateCourse extends Component {
       };
 
       render() {
-          const { course, user, validationErrors } = this.state; //isn't "course" used in lines 75, 79, 87, 91??
+          const { user, validationErrors } = this.state; //isn't "course" used in lines 75, 79, 87, 91??
           return(
             <div className="bounds course--detail">
                 <h1>Update Course</h1>

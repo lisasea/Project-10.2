@@ -1,5 +1,5 @@
 import { Redirect } from "react-router-dom";
-import React from "react";
+import React, {Component} from "react";
 
 class UserSignOut extends Component {
     render() {

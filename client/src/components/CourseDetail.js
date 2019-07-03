@@ -72,7 +72,7 @@ class CourseDetail extends Component { // setup empty courses array and empty us
                       parseInt(localStorage.getItem("id")) ? (
                         <span> {/*Update Course Button  // followed by Delete Course Button*/}
                           <Link className="button" to={"/courses/"+this.state.course.id+"/update"}>Update Course</Link>
-                          <button className="button" onClick={e => this.handleDelete(e, emailAddress, password, authenticated)}>Delete Course</button>
+                          <button className="button" onClick={e => this.handleDelete(e, localStorage.getItem("username"), localStorage.getItem("password"))}>Delete Course</button>
                         </span>
                       ) : (
                         ""
