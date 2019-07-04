@@ -13,7 +13,7 @@ import UserSignIn from './components/UserSignIn';
 import UserSignOut from './components/UserSignOut';
 import UserSignUp from './components/UserSignUp';
 
-class App extends Component { //set global state
+class App extends Component { //set global state includes user log in
   constructor() {
     super();
   this.state = {};
